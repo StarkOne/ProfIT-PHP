@@ -18,7 +18,11 @@ $news = \App\Models\News::threeNews();
 //debug($news);
 //var_dump($users);
 
-foreach ($news as $key) {
-	$div = "<div>Ссылка: <a href=article.php?id=".$key->id."> Стать номер $key->id</a></div><div>Автор: $key->author</div><br><div>$key->text</div><br><hr>";
-	echo $div;
-}
+// foreach ($news as $key) {
+// 	$div = "<div>Ссылка: <a href=article.php?id=".$key->id."> Стать номер $key->id</a></div><div>Автор: $key->author</div><br><div>$key->text</div><br><hr>";
+// 	echo $div;
+// }
+$user = new \App\Models\User();
+$user->name = "Vlad";
+$user->email = "Admin@admin.ru";
+$user->insert();
